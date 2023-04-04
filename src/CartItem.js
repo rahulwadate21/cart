@@ -11,11 +11,32 @@ class CartItem extends React.Component {
     }
   }
   increaseQuantity = () => {
-    console.log('this.state', this.state);
+    // this.state.qty += 1;
+    // console.log('this', this.state);
+    // setState form 1
+    // this.setState({
+    //   qty: this.state.qty + 1
+    // });
+
+    // setState form 2 - if prevState required use this
+    this.setState((prevState) => {
+      return {
+        qty: prevState.qty + 1
+      }
+    });
   }
 
   decreaseQuantity = () => {
+    const {qty} = this.state
+    if(qty == 0){
+      return;
+    }
     console.log('this.state',this.state);
+    this.setState((prevState) => {
+      return{
+        qty: prevState.qty - 1
+      }
+    });
   }
 
   deleteItem = () => {
