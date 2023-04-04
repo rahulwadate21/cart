@@ -2,3 +2,7 @@
   text-align: left;
   padding: 5px;
 }
+.cart{
+  display: flex;
+  flex-direction: column;
+}
