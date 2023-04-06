@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
+import './App.css';
 
 const Cart = (props) => {
   const { products } = props;
